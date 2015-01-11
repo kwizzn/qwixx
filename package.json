@@ -1,0 +1,50 @@
+{
+  "name": "qwixx",
+  "version": "0.0.0",
+  "author": "Renegades",
+  "private": true,
+  "scripts": {
+    "prepare": "rm -rf node_modules/ && npm install && grunt --no-color clean build",
+    "build": "grunt --no-color build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "DEBUG=app:*, grunt start"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "hbsfy",
+        {
+          "precompilerOptions": {
+            "knownHelpersOnly": false
+          }
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "backbone": "^1.1.2",
+    "bootstrap-styl": "^4.0.1",
+    "browserify": "^5.13.1",
+    "exorcist": "^0.1.6",
+    "express": "^4.10.7",
+    "express-handlebars": "^1.1.0",
+    "grunt": "^0.4.5",
+    "grunt-bump": "0.0.16",
+    "grunt-concurrent": "^1.0.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-compress": "^0.12.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-less": "^0.12.0",
+    "grunt-contrib-requirejs": "^0.4.4",
+    "grunt-contrib-stylus": "^0.20.0",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-mkdir": "^0.1.2",
+    "grunt-supervisor": "^0.2.4",
+    "handlebars": "^2.0.0",
+    "hbsfy": "^2.2.0",
+    "jquery": "^2.1.1",
+    "underscore": "^1.7.0"
+  }
+}

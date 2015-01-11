@@ -1,0 +1,14 @@
+{
+  "apps" : [
+    {
+      "name"        : "type10_deals_prod",
+      "script"      : "index.js",
+      "cwd"         : ".",
+      "env": {
+        "NODE_ENV": "prod"
+      },
+      "port": 3005,
+      "exec_mode"  : "fork_mode"
+    }
+  ]
+}
