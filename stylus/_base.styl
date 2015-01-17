@@ -6,10 +6,17 @@ h1
   font-size: 24px
   text-align: center
 
-.scoreRow
+.result
+  font-size: 24px
+  text-align: center
+  padding: 4px
+  width: 50px
+
+.colorRow
   display: flex
   display: -webkit-flex;
   button
+    @extend .btn
     flex: 1
     -moz-flex: 1
     -webkit-flex: 1
@@ -18,49 +25,44 @@ h1
       pointer-events: none
   &.red
     button
+      @extend .btn-danger
       &.active
         background-color: $brand-danger-darker
         border-color: $brand-danger-darkest
-  &.yellow
+    .result
+      color: $brand-danger
+&.yellow
     button
+      @extend .btn-warning
       &.active
         background-color: $brand-warning-darker
         border-color: $brand-warning-darkest
+    .result
+      color: $brand-warning
   &.green
     button
+      @extend .btn-success
       &.active
         background-color: $brand-success-darker
         border-color: $brand-success-darkest
+    .result
+      color: $brand-success
   &.blue
     button
+      @extend .btn-primary
       &.active
         background-color: $brand-primary-darker
         border-color: $brand-primary-darkest
+    .result
+      color: $brand-primary
   &.grey
     button
       &.active
         background-color: $gray-light
         border-color: $gray
 
-.resultRow
-  font-size: 24px
-  text-align: center
-
+.totalRow
   .result
-    border-radius: 5px
-    padding: 2px 5px
-    &.red
-      color: $brand-danger
-      border: 2px solid $brand-danger
-    &.yellow
-      color: $brand-warning
-      border: 2px solid $brand-warning
-    &.green
-      color: $brand-success
-      border: 2px solid $brand-success
-    &.blue
-      color: $brand-primary
-      border: 2px solid $brand-primary
-    &.grey
-      color: $gray
-      border: 2px solid $gray
+    display: block
+    float: right
+    border-top: 1px solid black
