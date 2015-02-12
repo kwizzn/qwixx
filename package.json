@@ -1,25 +1,15 @@
 {
   "name": "qwixx",
+  "description": "A simple scoresheet app in Backbone.js for the popular dice game Qwixx",
   "version": "0.1.0",
   "author": "Christian Neuhäuser",
-  "private": true,
+  "main": "index.js",
   "scripts": {
     "prepare": "rm -rf node_modules/ && npm install && grunt --no-color clean build",
     "build": "grunt --no-color build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "DEBUG=app:*, grunt start"
-  },
-  "browserify": {
-    "transform": [
-      [
-        "hbsfy",
-        {
-          "precompilerOptions": {
-            "knownHelpersOnly": false
-          }
-        }
-      ]
-    ]
+    "develop": "DEBUG=app:*, grunt start",
+    "start": "node index.js"
   },
   "dependencies": {
     "backbone": "^1.1.2",
@@ -47,5 +37,32 @@
     "hbsfy": "^2.2.0",
     "jquery": "^2.1.1",
     "underscore": "^1.7.0"
-  }
+  },
+  "browserify": {
+    "transform": [
+      [
+        "hbsfy",
+        {
+          "precompilerOptions": {
+            "knownHelpersOnly": false
+          }
+        }
+      ]
+    ]
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kwizzn/qwixx"
+  },
+  "keywords": [
+    "qwixx",
+    "node",
+    "backbone",
+    "express",
+    "backbone"
+  ],
+  "license": "MIT"
 }
