@@ -26,6 +26,6 @@ node_modules/
 
 # build
 build/
-www/fonts/bootstrap-stylus
+www/fonts/
 www/js/
 www/css/
