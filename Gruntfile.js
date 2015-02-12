@@ -166,7 +166,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-supervisor');
 
 
-    grunt.registerTask('build', ['clean', 'mkdir', 'browserify', 'stylus']);
+    grunt.registerTask('build', ['clean', 'mkdir', 'browserify', 'stylus', 'copy']);
     grunt.registerTask('start', ['concurrent:start']);
     grunt.registerTask('default', ['build']);
 };
