@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "prepare": "rm -rf node_modules/ && npm install && grunt --no-color clean build",
-    "build": "grunt --no-color build",
+    "postinstall": "grunt --no-color build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "DEBUG=app:*, grunt start",
     "start": "node index.js"
