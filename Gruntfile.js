@@ -168,5 +168,6 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', ['clean', 'mkdir', 'browserify', 'stylus', 'copy']);
     grunt.registerTask('start', ['concurrent:start']);
+    grunt.registerTask('heroku:production', 'build');
     grunt.registerTask('default', ['build']);
 };
