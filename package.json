@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "prepare": "rm -rf node_modules/ && npm install && grunt --no-color clean build",
-    "postinstall": "grunt --no-color build",
+    "postinstall": "./node_modules/grunt-cli/bin/grunt --no-color build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "DEBUG=app:*, grunt start",
     "start": "node index.js"
@@ -21,6 +21,7 @@
     "express-handlebars": "^1.1.0",
     "grunt": "^0.4.5",
     "grunt-bump": "0.0.16",
+    "grunt-cli": "^0.1.13",
     "grunt-concurrent": "^1.0.0",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-compress": "^0.12.0",
