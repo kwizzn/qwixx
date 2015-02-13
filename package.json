@@ -5,7 +5,8 @@
   "author": "Christian Neuhäuser",
   "main": "index.js",
   "scripts": {
-    "prepare": "rm -rf node_modules/ && npm install && grunt --no-color clean build",
+    "prepare": "rm -rf node_modules/ && npm install && grunt --no-color",
+    "postinstall": "node_modules/grunt-cli/bin/grunt",
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "DEBUG=app:*, grunt start",
     "start": "node index.js"

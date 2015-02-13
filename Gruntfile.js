@@ -1,7 +1,7 @@
 var fs = require('fs'),
     browserify = require('browserify'),
     exorcist = require('exorcist'),
-    env = require('./config/environment');
+    env = process.env.NODE_ENV || 'dev';
 
 module.exports = function(grunt) {
 
@@ -142,7 +142,7 @@ module.exports = function(grunt) {
 
         bundler.add(__dirname + '/webapp.js');
 
-        if (env.name !== 'dev') {
+        if (env !== 'dev') {
             bundler.plugin('minifyify', { map: 'index.js.map', output: __dirname + '/www/js/index.js.map' });
             bundler.bundle(done)
                 .pipe(fs.createWriteStream(__dirname + '/www/js/index.js'));
@@ -168,6 +168,5 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', ['clean', 'mkdir', 'browserify', 'stylus', 'copy']);
     grunt.registerTask('start', ['concurrent:start']);
-    grunt.registerTask('heroku:production', 'build');
     grunt.registerTask('default', ['build']);
 };
