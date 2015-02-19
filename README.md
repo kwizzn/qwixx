@@ -12,6 +12,10 @@ This app comes as a simple Node.js app. Just install the depenencies and start a
 
 Then point your browser to http://localhost:3000/
 
+## Demo
+
+  https://qwixx.herokuapp.com/
+
 ## License
 
   MIT
