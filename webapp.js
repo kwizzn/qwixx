@@ -1,10 +1,7 @@
 (function() {
     'use strict';
 
-    var AppView = require('./lib/views/AppView'),
-        Backbone = require('backbone'),
-        $ = window.$ = Backbone.$ = require('jquery'),
-        _ = require('underscore')
+    var AppView = require('./lib/views/AppView');
 
     function start() {
         window.app = {
