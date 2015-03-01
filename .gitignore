@@ -29,3 +29,7 @@ build/
 www/fonts/
 www/js/
 www/css/
+
+platforms/*/www
+platforms/*/build
+platforms/*/CordovaLib/build
