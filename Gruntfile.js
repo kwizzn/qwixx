@@ -49,6 +49,10 @@ module.exports = function(grunt) {
             }
         },
         copy: {
+            main: {
+                src: 'templates/phonegap.html',
+                dest: 'www/index.html'
+            },
             fonts: {
                 files: [
                     {

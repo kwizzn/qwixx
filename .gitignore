@@ -26,10 +26,7 @@ node_modules/
 
 # build
 build/
-www/fonts/
-www/js/
-www/css/
-
+www/
 platforms/*/www
 platforms/*/build
 platforms/*/CordovaLib/build
