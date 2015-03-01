@@ -8,8 +8,8 @@ describe('ColorModel', function() {
 
     describe('getItemsCount()', function() {
         it('should return 0 after initialization', function(){
-            var colorView = new ColorModel({ className: 'red' });
-            expect(colorView.getItemsCount()).to.equal(0);
+            var colorModel = new ColorModel(null, { color: 'red' });
+            expect(colorModel.getItemsCount()).to.equal(0);
         });
     });
 
